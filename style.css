@@ -17,7 +17,7 @@ body {
 }
 
 .container{
-    width: 80%;
+    max-width: 80%;
     height: 90vh;
     background-color: #fff;
 }
@@ -26,5 +26,57 @@ body {
     width: 30%;
     height: 100%;
     background: rgb(51, 78, 95);
+}
+
+.chat-search{
+    height: 10%;
+    display: flex;
+    
+}
+
+.chat-search i{
+    color: #fff;
+    font-size: 20px;
+    margin: 18px 20px;
+    cursor: pointer;
+}
+
+.chat-search .chat-input{
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    outline: none;
+    width: 80%;
+    height: 35px;
+    margin: 13px;
+    margin-left: 10px;
+
+}
+
+.chat-name{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 90%;
+}
+
+.chat-name ul li{
+    
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.chat-name ul li img{
+    width: 17%;
+    height: 7vh;
+    border-radius: 50%;
+
+}
+
+.chat-name ul li h3{
+    font-size: 15px;
+    padding: 15px;
+    color: #fff;
 }
 
