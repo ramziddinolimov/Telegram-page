@@ -22,6 +22,16 @@ body {
     display: flex;
 }
 
+i{
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+i:hover{
+    color: #fff;
+}
+
 .telegram__chat-name{
     width: 30%;
     height: 100%;
@@ -35,10 +45,9 @@ body {
 }
 
 .chat-search i{
-    color: #fff;
     font-size: 20px;
     margin: 18px 20px;
-    cursor: pointer;
+    
 }
 
 .chat-search .chat-input{
@@ -93,13 +102,48 @@ body {
 
 
 .telegram__chat-message{
+    display: flex;
     width: 70%;
     height: 100%;
     background: linear-gradient(139deg,#6fb1a3cb 0%, #4c617eb6 90%);
 }
 
 .telegram__chat-message .chat-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 10%;
     background: rgb(51, 78, 95);
+    padding: 15px;
+}
+
+form{
+    display: flex;
+}
+
+
+.chat-navbar .chat-navbar-icons span i{
+    margin: 0px 15px;
+    font-size: 18px;
+}
+
+.chat-navbar .chat-navbar-name h4{
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-navbar .chat-navbar-name p{
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.chat-write{
+    align-self: flex-end;
+    width: 100%;
+    height: 8%;
+    background: rgb(51, 78, 95);
+    
 }
