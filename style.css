@@ -61,10 +61,16 @@ body {
 }
 
 .chat-name ul li{
-    
     display: flex;
     align-items: center;
     padding: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.chat-name ul li:hover{
+    background-color: rgb(141, 185, 185);
 }
 
 .chat-name ul li img{
