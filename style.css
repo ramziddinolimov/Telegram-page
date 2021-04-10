@@ -17,9 +17,11 @@ body {
 }
 
 .container{
+    position: relative;
     max-width: 80%;
     height: 90vh;
     display: flex;
+    overflow: hidden;
 }
 
 i{
@@ -30,6 +32,83 @@ i{
 
 i:hover{
     color: #fff;
+}
+
+.shadow{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.shadow-hidden{
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: rgb(47, 124, 77);
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+
+.menu-navbar{
+    width: 100%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.menu .menu-navbar img{
+    width: 27%;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+.menu .menu-navbar h1 {
+    font-size: 16px;
+    color: #fff;
+    margin: 0px 22px;
+    cursor: pointer;
+}
+
+.menu .menu-navbar p{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0px 22px;
+}
+
+.menu .menu-function ul li {
+    display: flex;
+    align-items: center;
+}
+
+.menu-function ul li{
+    margin: 20px 15px 10px;
+}
+
+.menu-function ul li i {
+    font-size: 20px;
+}
+
+.menu-function ul li h3 {
+    font-size: 20px;
+    color: #111;
+    font-weight: 500;
+    margin: 0px 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.menu-function ul li h3:hover{
+    color: #fff ;
+}
+
+.menu-hidden{
+     /* display: none;  */
 }
 
 .telegram__chat-name{
@@ -181,3 +260,8 @@ i:hover{
     outline: none;
     border: none;
 }
+
+
+
+
+
