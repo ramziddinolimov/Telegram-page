@@ -35,9 +35,12 @@ i:hover{
 }
 
 .settings{
+    position: absolute;
     width: 30%;
     height: 100%;
     background: rgb(51, 78, 95);
+    transform: translate(100%);
+    transition: 0.3s;
 }
 
 .setting-navbar{
@@ -132,8 +135,8 @@ i:hover{
     color: #fff ;
 }
 
-.menu-hidden{
-    /* display: none; */
+.modal-settings{
+    display: none;
 }
 
 .telegram__chat-name{
