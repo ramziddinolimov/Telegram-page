@@ -12,8 +12,8 @@ menuBtnElement.addEventListener ('click', () => {
 }) 
 
 shadowElement.addEventListener ('click', () => {
-    menuElement.classList.add('menu-hidden')
     shadowElement.classList.add('shadow-hidden')
+    settingElement.classList.add('modal-settings')
     menuElement.style.transform = 'translateX(-100%)'
 })
 
@@ -21,17 +21,20 @@ shadowElement.addEventListener ('click', () => {
 
 let settingBtnElement = document.querySelector('.setting-btn')
 let settingElement = document.querySelector('.settings')
+let settingExitElement = document.querySelector('.setting-exit')
+
 
 settingBtnElement.addEventListener ('click', () => {
     settingElement.classList.remove('modal-settings')
-    shadowElement.classList.remove('shadow-hidden')
-    settingElement.style.transform = 'translate(0%)'
+    menuElement.style.transform = 'translateX(-100%)'
+
 })
 
-shadowElement.addEventListener ('click', () => {
-    settingElement.classList.add('modal-settings')
+settingExitElement.addEventListener('click', () => {
+    settingElement.style.display = 'none'
     shadowElement.classList.add('shadow-hidden')
-    settingElement.style.transform = 'translate(100%)'
 })
+
+        
 
 

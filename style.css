@@ -36,22 +36,47 @@ i:hover{
 
 .settings{
     position: absolute;
-    width: 30%;
-    height: 100%;
-    background: rgb(51, 78, 95);
-    transform: translate(100%);
-    transition: 0.3s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 500px;
+    background-color: aqua;
+    z-index: 3;
+    
+    
+    
+
 }
 
-.setting-navbar{
+.setting-img {
+    width: 100px;
+}
+
+.setting-img img{
+    width: 100%;
+}
+
+/* .settings{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 700px;
+    background: rgb(51, 78, 95);
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+} */
+
+/* .setting-navbar{
     width: 100%;
     height: 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
-.setting-img{
+/* .setting-img{
     display: flex;
     align-items: center;
 }
@@ -59,7 +84,7 @@ i:hover{
 .setting-img .setting__img-text h1{
     font-size: 17px;
     color: #fff;
-}
+} */
 
 .shadow{
     background-color: rgba(0, 0, 0, 0.5);
@@ -87,8 +112,8 @@ i:hover{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.menu .menu-navbar img,
-.settings .setting-img img{
+.menu .menu-navbar img{
+/* .settings .setting-img img{ */
     width: 27%;
     height: 50px;
     border-radius: 50%;
@@ -135,9 +160,9 @@ i:hover{
     color: #fff ;
 }
 
-.modal-settings{
+.modal-settings{ 
     display: none;
-}
+} 
 
 .telegram__chat-name{
     width: 30%;
