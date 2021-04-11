@@ -48,6 +48,16 @@ i:hover{
     justify-content: space-between;
 }
 
+.setting-img{
+    display: flex;
+    align-items: center;
+}
+
+.setting-img .setting__img-text h1{
+    font-size: 17px;
+    color: #fff;
+}
+
 .shadow{
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
@@ -74,7 +84,8 @@ i:hover{
     background: rgba(0, 0, 0, 0.5);
 }
 
-.menu .menu-navbar img{
+.menu .menu-navbar img,
+.settings .setting-img img{
     width: 27%;
     height: 50px;
     border-radius: 50%;
