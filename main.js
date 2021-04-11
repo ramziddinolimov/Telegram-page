@@ -32,9 +32,12 @@ settingBtnElement.addEventListener ('click', () => {
 
 settingExitElement.addEventListener('click', () => {
     settingElement.style.display = 'none'
-    shadowElement.classList.add('shadow-hidden')
+    shadowElement.classList.add('shadow-hidden  ')
 })
 
+
+// Chat Write
         
 
-
+let formElement = document.querySelector('.form')
+let inputElement = document.querySelector('.chat-input2')
