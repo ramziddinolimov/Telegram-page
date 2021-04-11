@@ -12,16 +12,18 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgb(129, 179, 185);
+    background-color: rgb(178, 182, 182);
     font-family: 'Poppins', sans-serif;
 }
 
 .container{
+    border-radius: 10px;
     position: relative;
     max-width: 80%;
     height: 90vh;
     display: flex;
     overflow: hidden;
+    box-shadow: 3px 3px 10px 2px black;
 }
 
 i{
@@ -42,7 +44,7 @@ i:hover{
     width: 350px;
     height: 500px;
     background-color: aqua;
-    z-index: 3;
+    z-index: 3                                                                                                                                                  ;
     
     
     
