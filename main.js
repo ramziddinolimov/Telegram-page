@@ -38,6 +38,19 @@ settingExitElement.addEventListener('click', () => {
 
 // Chat Write
         
-
 let formElement = document.querySelector('.form')
 let inputElement = document.querySelector('.chat-input2')
+let listElement = document.querySelector('.chat-list')
+let buttonElement = document.querySelector('.button')
+
+
+formElement.onsubmit = function (event){
+    event.preventDefault()
+    let newLiElement = document.createElement('li')
+    newLiElement.classList.add('chat-itemnew')
+    if (inputElement.value == false){
+        return false
+    }  else {newLiElement.textContent = newLiElement.value
+    listElement.appendChild (newLiElement)}
+    formElement.reset()
+}
