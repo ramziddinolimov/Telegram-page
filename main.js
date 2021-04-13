@@ -54,3 +54,23 @@ formElement.onsubmit = function (event){
     listElement.appendChild (newLiElement)}
     formElement.reset()
 }
+
+
+
+// Chat Name
+
+let messagesListElement = document.querySelector('.messages-list')
+
+
+renderUsers ()
+
+function renderUsers(parentElement, data){
+    for(let user of data){
+        let newLiElement = document.createElement('li')
+        newLiElement.textContent = user.name
+        newLiElement.addEventListener('click', event => {
+            renderMessages(messagesListElement, user.messages)
+        })
+        parentElement.appendChild(newLiElement)
+    }
+}
