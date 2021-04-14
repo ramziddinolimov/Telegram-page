@@ -252,7 +252,7 @@ const DATA = [
 ]
 
 let messagesListElement = document.querySelector('.messages-list')
-let chatUlElement = document.querySelector('.chat-list')
+
 currentChat = 1
 
 inputElement.addEventListener('keyup', event =>{
@@ -263,7 +263,7 @@ inputElement.addEventListener('keyup', event =>{
             body: messageBody,
             isMine: true
         })
-        renderMessages(chatUlElement, userData.messages)
+        renderMessages(listElement, userData.messages)
         event.target.value = ""
     }
 })
@@ -281,7 +281,7 @@ function renderUsers(parentElement, data){
         nameElement.classList.add("messages-name")
         newImgElement.src = user.photo
         newLiElement.addEventListener('click', () =>{
-            renderMessages(chatUlElement, user.messages)
+            renderMessages(listElement, user.messages)
             currentChat = user.id
             inputElement.disabled = false
         })
