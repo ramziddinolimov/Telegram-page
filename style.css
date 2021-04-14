@@ -82,34 +82,6 @@ i:hover{
     width: 100%;
 }
 
-/* .settings{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 400px;
-    height: 700px;
-    background: rgb(51, 78, 95);
-    transform: translate(-50%, -50%);
-    transition: 0.3s;
-} */
-
-/* .setting-navbar{
-    width: 100%;
-    height: 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-
-/* .setting-img{
-    display: flex;
-    align-items: center;
-}
-
-.setting-img .setting__img-text h1{
-    font-size: 17px;
-    color: #fff;
-} */
 
 .shadow{
     background-color: rgba(0, 0, 0, 0.5);
