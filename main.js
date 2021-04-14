@@ -47,30 +47,221 @@ let buttonElement = document.querySelector('.button')
 formElement.onsubmit = function (event){
     event.preventDefault()
     let newLiElement = document.createElement('li')
+    newLiElement.textContent = inputElement.value
     newLiElement.classList.add('chat-itemnew')
-    if (inputElement.value == false){
-        return false
-    }  else {newLiElement.textContent = newLiElement.value
-    listElement.appendChild (newLiElement)}
-    formElement.reset()
+   listElement.appendChild(newLiElement)
+
+   formElement.reset()
 }
+
+buttonElement.onclick = function (event){
+    event.preventDefault()
+    let newLiElement = document.createElement('li')
+    newLiElement.textContent = inputElement.value
+    newLiElement.classList.add('chat-itemnew')
+   listElement.appendChild(newLiElement)
+
+   formElement.reset()
+}
+
+
 
 
 
 // Chat Name
 
+
+const DATA = [
+    {
+        id: 1,
+        name: "Ramziddin Olimov",
+        photo: "./images/01.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+
+    {
+        id: 2,
+        name: "Mehriddin Rajabov",
+        photo: "./images/02.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 3,
+        name: "Shaxruz Shomurodov",
+        photo: "./images/03.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 4,
+        name: "Og'abek Olimov",
+        photo: "./images/04.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 5,
+        name: "Hamroev Jamol",
+        photo: "./images/05.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 6,
+        name: "Odil Otamurodov",
+        photo: "./images/06.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 7,
+        name: "Jahongir Orziev",
+        photo: "./images/07.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 8,
+        name: "Jasur Hamidov",
+        photo: "./images/08.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 9,
+        name: "Faxriddin Yusupov",
+        photo: "./images/09.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    },
+
+    {
+        id: 10,
+        name: "Shaxzod Ibroximov",
+        photo: "./images/10.jpg",
+        phone: "+998900002820",
+        messages: [
+            {
+                body: "Salom qalaysan",
+                isMine: true
+            },
+            {
+                body: "Yaxshi raxmat",
+                isMine: false
+            }
+        ]
+    }
+]
+
 let messagesListElement = document.querySelector('.messages-list')
 
 
-renderUsers ()
+renderUsers (messagesListElement, DATA)
 
 function renderUsers(parentElement, data){
     for(let user of data){
-        let newLiElement = document.createElement('li')
-        newLiElement.textContent = user.name
-        newLiElement.addEventListener('click', event => {
-            renderMessages(messagesListElement, user.messages)
-        })
+        let newLiElement = document.createElement("li")
+        let newImgElement = document.createElement("img")
+        let nameElement = document.createElement("p")
+        newLiElement.classList.add("messages-item")
+        newImgElement.classList.add("messages-img")
+        nameElement.classList.add("messages-name")
+        newImgElement.src = user.photo
+        nameElement.textContent = user.name
+        newLiElement.appendChild(newImgElement)
+        newLiElement.appendChild(nameElement)
         parentElement.appendChild(newLiElement)
     }
+        
 }
