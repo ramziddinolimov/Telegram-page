@@ -43,7 +43,6 @@ body {
     height: 90vh;
     display: flex;
     overflow: hidden;
-    overflow-y: scroll;
     box-shadow: 3px 3px 10px 2px black;
 }
 
@@ -55,6 +54,22 @@ i{
 
 i:hover{
     color: #fff;
+}
+
+
+
+.modal-header{
+    width: 40%;
+    height: 20%;
+    background: #00d4ff;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header{
+    display: none;
 }
 
 .settings{
@@ -333,6 +348,7 @@ i:hover{
 .chat-typing{
     width: 100%;
     height: 82%;
+    overflow-y: scroll;
 
 }
 

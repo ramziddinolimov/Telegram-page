@@ -3,6 +3,8 @@
 let menuBtnElement = document.querySelector('.hamburger-btn')
 let menuElement = document.querySelector('.menu')
 let shadowElement = document.querySelector('.shadow')
+let headerElement = document.querySelector('.modal-header')
+let headerNavbarElement = document.querySelector('.chat-navbar')
 
 
 menuBtnElement.addEventListener ('click', () => {
@@ -15,6 +17,11 @@ shadowElement.addEventListener ('click', () => {
     shadowElement.classList.add('shadow-hidden')
     settingElement.classList.add('modal-settings')
     menuElement.style.transform = 'translateX(-100%)'
+})
+
+headerNavbarElement.addEventListener ('click', () => {
+    headerElement.classList.remove('header')
+    shadowElement.classList.remove('shadow-hidden')
 })
 
 // Setting button
@@ -245,6 +252,21 @@ const DATA = [
 ]
 
 let messagesListElement = document.querySelector('.messages-list')
+let chatUlElement = document.querySelector('.chat-list')
+currentChat = 1
+
+inputElement.addEventListener('keyup', event =>{
+    if(event.keyCode == 13){
+        let messageBody = event.target.value
+        let userData = DATA.find(user => user.id == currentChat)
+        userData.messages.push({
+            body: messageBody,
+            isMine: true
+        })
+        renderMessages(chatUlElement, userData.messages)
+        event.target.value = ""
+    }
+})
 
 
 renderUsers (messagesListElement, DATA)
@@ -258,10 +280,25 @@ function renderUsers(parentElement, data){
         newImgElement.classList.add("messages-img")
         nameElement.classList.add("messages-name")
         newImgElement.src = user.photo
+        newLiElement.addEventListener('click', () =>{
+            renderMessages(chatUlElement, user.messages)
+            currentChat = user.id
+            inputElement.disabled = false
+        })
         nameElement.textContent = user.name
         newLiElement.appendChild(newImgElement)
         newLiElement.appendChild(nameElement)
         parentElement.appendChild(newLiElement)
     }
         
+}
+
+
+function renderMessages(parentElement, data){
+    parentElement.textContent = ""
+    for(let message of data){
+        let newLiElement = document.createElement('li')
+        newLiElement.textContent = message.body
+        parentElement.appendChild(newLiElement)
+    }
 }
