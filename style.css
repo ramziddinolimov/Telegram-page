@@ -132,6 +132,16 @@ i:hover{
 .header__send ul li span{
     margin-left: 60px;
 }
+
+.header__send ul li i{
+    font-size: 20px;
+}
+
+.header__send .send{
+    font-size: 20px;
+    margin-left: 120px;
+    color: rgb(89, 0, 255);
+}
 .settings{
     position: absolute;
     top: 50%;
