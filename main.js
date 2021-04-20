@@ -51,15 +51,18 @@ let listElement = document.querySelector('.chat-list')
 let buttonElement = document.querySelector('.button')
 
 
-formElement.onsubmit = function (event){
-    event.preventDefault()
+inputElement.addEventListener("",  event =>{
+    if(event.keyCode == 13){
+    
     let newLiElement = document.createElement('li')
     newLiElement.textContent = inputElement.value
     newLiElement.classList.add('chat-itemnew')
    listElement.appendChild(newLiElement)
+    }
+    event.preventDefault()
 
    formElement.reset()
-}
+})
 
 buttonElement.onclick = function (event){
     event.preventDefault()
